@@ -5,6 +5,7 @@
 class crashplan (
 ) {
   package { 'crashplan-halyard':
-    provider => 'brewcask'
+    provider => 'brewcask',
+    require  => Homebrew::Tap['halyard/casks']
   }
 }
